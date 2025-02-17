@@ -6,7 +6,7 @@ export interface Post {
 }
 
 export async function fetchPosts() {
-  await new Promise((resolve) => setTimeout(resolve, 2300)); // Simulate network delay
+  await new Promise((resolve) => setTimeout(resolve, 2300)); // Simulate network delay.
   const postListRes = await fetch("https://jsonplaceholder.typicode.com/posts");
   const postList = (await postListRes.json()) as Post[];
   return postList;
