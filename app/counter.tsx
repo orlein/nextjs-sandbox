@@ -21,7 +21,6 @@ export function useCounter() {
 
 export function Counter(props: PropsWithChildren) {
   const [count, setCount] = React.useState(0);
-  const id = React.useId();
 
   const increment = React.useCallback(() => {
     setCount((count) => count + 1);
