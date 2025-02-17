@@ -1,5 +1,7 @@
 import { fetchPosts } from "./fetch-posts";
 
+export const dynamic = "force-dynamic";
+
 export default async function PostListPage() {
   const posts = await fetchPosts();
   return (

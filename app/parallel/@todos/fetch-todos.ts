@@ -6,8 +6,6 @@ export interface Todo {
   completed: boolean;
 }
 
-export const dynamic = "force-dynamic";
-
 export async function fetchTodos() {
   await new Promise((resolve) => setTimeout(resolve, 3000)); // Simulate network delay
   const todoListRes = await fetch(

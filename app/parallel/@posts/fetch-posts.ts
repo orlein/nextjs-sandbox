@@ -7,8 +7,6 @@ export interface Post {
   body: string;
 }
 
-export const dynamic = "force-dynamic";
-
 export async function fetchPosts() {
   await new Promise((resolve) => setTimeout(resolve, 2300)); // Simulate network delay.
   const postListRes = await fetch(

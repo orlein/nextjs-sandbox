@@ -1,6 +1,8 @@
 import { fetchTodos } from "./fetch-todos";
 import { TodoElement } from "./todo-element";
 
+export const dynamic = "force-dynamic";
+
 export default async function TodoList() {
   const todoList = await fetchTodos();
 
