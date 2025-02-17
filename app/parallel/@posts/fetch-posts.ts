@@ -1,3 +1,5 @@
+"use server";
+
 export interface Post {
   userId: number;
   id: number;
@@ -5,9 +7,17 @@ export interface Post {
   body: string;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function fetchPosts() {
   await new Promise((resolve) => setTimeout(resolve, 2300)); // Simulate network delay.
-  const postListRes = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const postListRes = await fetch(
+    "https://jsonplaceholder.typicode.com/posts",
+    {
+      cache: "no-cache",
+    }
+  );
   const postList = (await postListRes.json()) as Post[];
+
   return postList;
 }
