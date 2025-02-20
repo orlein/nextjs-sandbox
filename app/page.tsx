@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <>
       <Link href={"/parallel"}>Parallel Routes</Link>
+      <Link href={"/context"}>React.Context</Link>
     </>
   );
 }

@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 
 export default async function TodoList() {
   const todoList = await fetchTodos();
+  throw new Error("This is an error");
 
   return (
     <>
